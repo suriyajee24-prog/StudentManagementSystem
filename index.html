@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student records in one place</p>
+    </header>
+
+    <main>
+        <section class="form-card">
+            <h2 id="formTitle">Add Student</h2>
+
+            <form id="studentForm">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" required
+                       placeholder="Enter student name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required
+                       placeholder="Enter email address">
+
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="IT">IT</option>
+                    <option value="ECE">ECE</option>
+                </select>
+
+                <label for="year">Year</label>
+                <select id="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="submit" id="saveButton">
+                        Add Student
+                    </button>
+                    <button type="button" id="cancelButton"
+                            class="cancel" hidden>
+                        Cancel Edit
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h2>Student Records</h2>
+
+            <input type="search" id="searchInput"
+                   placeholder="Search by name or email">
+
+            <p id="message" role="status"></p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                        <tr>
+                            <td colspan="6">Loading students...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
