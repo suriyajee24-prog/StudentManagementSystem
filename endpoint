@@ -1,0 +1,46 @@
+POST http://localhost:8080/api/students
+
+{
+    "name": "suriya",
+    "email": "suriyajee24@gmail.com",
+    "department": "AIML",
+    "year": "3rd Year"
+}
+
+get all the students
+
+GET http://localhost:8080/api/students
+
+insert multiple students
+
+POST http://localhost:8080/api/students/bulk
+
+[
+    {
+        "name": "suriya",
+        "email": "suriyajee24@gmail.com",
+        "department": "AIML",
+        "year": "3rd Year"
+    },
+    {
+        "name": "rudhra",
+        "email": "rudhra24@gmail.com",
+        "department": "AIML",
+        "year": "3rd Year"
+    }
+]
+
+update data
+
+PUT http://localhost:8080/api/students/21
+
+{
+    "name": "suriya",
+    "email": "suriyajee24@gmail.com",
+    "department": "AIML",
+    "year": "3rd Year"
+}
+
+delete
+
+DELETE http://localhost:8080/api/students/21
