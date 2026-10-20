@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api/students";
+const API_URL = "xxx";
 
 const form = document.getElementById("studentForm");
 const nameInput = document.getElementById("name");
